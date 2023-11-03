@@ -61,8 +61,3 @@ class Ingredient:
 
     def __repr__(self) -> str:
         return f"Ingredient('{self.name}')"
-
-
-ingredient1 = Ingredient("camarão")
-cod = ingredient1.__hash__()
-print(ingredient1)

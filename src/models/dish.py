@@ -39,3 +39,7 @@ class Dish:
 
     def get_ingredients(self):
         return set(self.recipe.keys())
+
+
+dish_main = Dish("sushi", 1.50)
+print(dish_main.__hash__)
