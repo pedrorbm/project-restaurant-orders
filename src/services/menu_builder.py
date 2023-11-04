@@ -36,12 +36,18 @@ class MenuBuilder:
                 "restrictions": data.get_restrictions(),
             }
 
+            validation = all(
+                ingredients in self.inventory.inventory
+                for ingredients in result["ingredients"]
+            )
+
             if (
                 restriction in result["restrictions"]
                 and restriction is not None
             ):
                 continue
 
-            menu.append(result)
+            if validation is True:
+                menu.append(result)
 
         return menu
